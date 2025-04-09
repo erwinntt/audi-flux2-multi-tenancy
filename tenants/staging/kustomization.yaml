@@ -3,5 +3,7 @@ kind: Kustomization
 namespace: apps
 resources:
   - ../base/dev-team
+  - ../base/monitoring-team
 patches:
   - path: dev-team-patch.yaml
+  - path: monitoring-team-patch.yaml
