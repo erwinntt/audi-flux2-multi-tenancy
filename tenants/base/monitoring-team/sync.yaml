@@ -8,8 +8,6 @@ spec:
   interval: 1m0s
   ref:
     branch: main
-  secretRef:
-    name: monitoring-team-auth
   url: https://github.com/erwinntt/audi-monitoring-team
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
