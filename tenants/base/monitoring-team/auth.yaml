@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Secret
 metadata:
     name: monitoring-team-auth
-    namespace: monitoring
+    namespace: apps
 stringData:
     password: ENC[AES256_GCM,data:dghSO1K1sYGlLeYkAAiYIxsTXCiv4jXFOH21pCl7oacQHLrwTivdqvZozXA8+P+WqQqBI1t33j/1NGhIoPLhZz2UhtKkVHmuR4q9m+wej8Qe0f/GKr8Gp7OsNdhl,iv:vAu0ABbrS5BEvxrFh7tqPwSA1qjIvtuKB7UMB6oKHV0=,tag:dTm40GIb5xsD8b/SgHzzIQ==,type:str]
     username: ENC[AES256_GCM,data:T7Q2893qhms=,iv:D2TPeQIebRuGXWuxgkOEnSI0tILuUXXJONwC2yi4AoA=,tag:naIxzRb9GdW3Rmt1SS19zg==,type:str]
