@@ -1,0 +1,27 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: dev-team
+  namespace: monitoring
+spec:
+  interval: 1m0s
+  ref:
+    branch: main
+  secretRef:
+    name: monitoring-team-auth
+  url: https://github.com/erwinntt/audi-monitoring-team
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: monitoring-team
+  namespace: monitoring
+spec:
+  interval: 1m0s
+  path: ./
+  prune: false
+  serviceAccountName: monitoring-team
+  sourceRef:
+    kind: GitRepository
+    name: monitoring-team

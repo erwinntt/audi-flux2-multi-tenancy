@@ -4,12 +4,15 @@ metadata:
   name: tenants
   namespace: flux-system
 spec:
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-gpg
   dependsOn:
-    - name: kyverno-policies
-  interval: 5m
-  serviceAccountName: kustomize-controller
+  - name: kyverno-policies
+  interval: 5m0s
+  path: ./tenants/staging
+  prune: true
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./tenants/staging
-  prune: true
