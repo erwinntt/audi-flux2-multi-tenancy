@@ -4,4 +4,4 @@ resources:
 - auth.yaml
 - rbac.yaml
 - sync.yaml
-namespace: apps
+namespace: monitoring
