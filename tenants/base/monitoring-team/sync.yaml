@@ -10,7 +10,7 @@ spec:
     branch: main
   secretRef:
     name: monitoring-team-auth
-   url: https://github.com/erwinntt/audi-monitoring-team
+  url: https://github.com/erwinntt/audi-monitoring-team
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
