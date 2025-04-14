@@ -8,7 +8,7 @@ spec:
   releaseName: rocketchat
   chart:
     spec:
-      chart: rocketchat-server/rocketchat
+      chart: rocketchat
       version: '6.24.x'
       sourceRef:
         kind: HelmRepository
