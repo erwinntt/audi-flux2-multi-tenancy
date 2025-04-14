@@ -1,0 +1,16 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: rocketchat
+  namespace: flux-system
+spec:
+  serviceAccountName: kustomize-controller
+  releaseName: rocketchat
+  chart:
+    spec:
+      chart: rocketchat-server/rocketchat
+      version: '6.24.x'
+      sourceRef:
+        kind: HelmRepository
+        name: rocketchat
+  interval: 5m
