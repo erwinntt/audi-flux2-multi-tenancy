@@ -53,7 +53,7 @@ spec:
   interval: 15m0s
   sourceRef:
     kind: GitRepository
-    name: rocketchat-system
+    name: flux-system
   serviceAccountName: kustomize-controller
   path: ./infrastructure/rocketchat
   prune: true
