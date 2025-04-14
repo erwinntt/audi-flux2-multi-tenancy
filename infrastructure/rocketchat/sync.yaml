@@ -13,4 +13,10 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: rocketchat
+      values:
+        mongodb:
+          auth:
+            passwords:
+              - rocketchat
+            rootPassword: rocketchatroot
   interval: 5m
