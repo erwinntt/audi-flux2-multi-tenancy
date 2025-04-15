@@ -22,7 +22,7 @@ spec:
     extraVolumes:
       - name: etc-certs
         hostPath:
-        - path: /etc/ssl/certs
+          path: /etc/ssl/certs
           type: Directory
     extraVolumeMounts:
       - mountPath: /etc/ssl/certs
