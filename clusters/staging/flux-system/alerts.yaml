@@ -4,7 +4,7 @@ metadata:
   name: rocket-webhook
   namespace: flux-system
 data:
-  address: rocketchat-rocketchat.flux-system.svc.cluster.local
+  address: cm9ja2V0Y2hhdC1yb2NrZXRjaGF0LmZsdXgtc3lzdGVtLnN2Yy5jbHVzdGVyLmxvY2Fs
 ---
 apiVersion: notification.toolkit.fluxcd.io/v1beta3
 kind: Provider
