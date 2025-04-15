@@ -24,8 +24,15 @@ spec:
         hostPath:
           path: /etc/ssl/certs
           type: Directory
+      - name: share-certs
+        hostPath:
+          path: /usr/share/ca-certificates
+          type: Directory
     extraVolumeMounts:
       - mountPath: /etc/ssl/certs
         name: etc-certs
+        readOnly: true
+      - mountPath: /usr/share/ca-certificates
+        name: share-certs
         readOnly: true
   interval: 5m
