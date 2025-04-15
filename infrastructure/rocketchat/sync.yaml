@@ -19,4 +19,13 @@ spec:
         passwords:
           - rocketchat
         rootPassword: rocketchatroot
+    extraVolumes:
+      - name: etc-certs
+        hostPath:
+        - path: /etc/ssl/certs
+          type: Directory
+    extraVolumeMounts:
+      - mountPath: /etc/ssl/certs
+        name: etc-certs
+        readOnly: true
   interval: 5m
