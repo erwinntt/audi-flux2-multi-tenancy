@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: rocket-webhook
+  namespace: flux-system
+data:
+  address: cm9ja2V0Y2hhdC1yb2NrZXRjaGF0LmZsdXgtc3lzdGVtLnN2Yy5jbHVzdGVyLmxvY2Fs
+---
+apiVersion: notification.toolkit.fluxcd.io/v1beta3
+kind: Provider
+metadata:
+  name: rocket
+  namespace: flux-system
+spec:
+  type: rocket
+  secretRef:
+    name: rocket-webhook
+---
+apiVersion: notification.toolkit.fluxcd.io/v1beta3
+kind: Alert
+metadata:
+  name: on-call-webapp
+  namespace: flux-system
+spec:
+  summary: "cluster addons"
+  eventMetadata:
+    env: "production"
+    cluster: "my-cluster"
+    region: "us-east-2"
+  providerRef:
+    name: rocket
+  eventSeverity: info
+  eventSources:
+    - kind: GitRepository
+      name: '*'
+    - kind: Kustomization
+      name: '*'
+---
