@@ -51,7 +51,7 @@ flux create kustomization tenants \
 
 ## New Team
 
-Ein neues Team wird mit einem eigenes Repository hizugefügt:
+Ein neues Team wird mit einem eigenes Repository hizugefügt (ggf. Teams IPO, A&F, CP, Next und COM). Hier das Template für die benötigten Schritte.
 
     flux -n apps create secret git new-team-auth --url=https://github.com/org/audi-new-team --username=user --password=$TOKEN --export > ./tenants/base/new-team/auth.yaml
 
