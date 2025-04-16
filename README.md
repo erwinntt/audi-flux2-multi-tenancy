@@ -78,6 +78,24 @@ Ein neues Team wird mit einem eigenes Repository hizugefügt (ggf. Teams IPO, A&
 
 ## Alerts
 
+### Rocket Chat
+
+Konfiguration von Rocket Chat unter `clusters/production/flux-system/alerts.yaml` und `clusters/staging/flux-system/alerts.yaml`.
+
+Die Rocket Chat Addresse muss in das Secret `rocket-webhook` eingetragen werden als base64 encoded.
+
+```
+data:
+  address: cm9ja2V0Y2hhdC1yb2NrZXRjaGF0LmZsdXgtc3lzdGVtLnN2Yy5jbHVzdGVyLmxvY2Fs
+```
+
+Rocket Chat ist auch per Team konfiguriert in den `base/alerts-rocket.yaml`.
+
+### Pager Duty
+
+Pager Duty ist per Team konfiguriert in den `base/alerts-pager.yaml`.
+
+
 Zwei Alerts Rocket und Pager usw................. TODO
 
 ![](docs/img/alert-pager-test.png)
