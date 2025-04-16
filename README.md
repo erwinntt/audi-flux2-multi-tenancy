@@ -2,11 +2,17 @@
 
 ![](docs/img/flux2-multi-tenancy.png)
 
-Prerequirements:
+## Introduction
+
+Diese Demo berücksichtigt in den Repositories zur Zeit nur Production und Staging. Diese müssen dann ggf. auf die tatsächlichen Erfordernissen der Zielumgebung angepasst werden.
+
+## Prerequirements
 
 - Repository bei Github erstellen
 - Ein Personal Access Token (PAC) für das Repository erstellen
 - Das PAC in die Datei `repo-pac.txt` kopieren
+
+## Installation
 
 Zuerst manuell erstellen, dann Flux installieren:
 
