@@ -56,7 +56,7 @@ Ein neues Team wird mit einem eigenes Repository hizugefügt:
     flux -n apps create secret git new-team-auth --url=https://github.com/org/audi-new-team --username=user --password=$TOKEN --export > ./tenants/base/new-team/auth.yaml
 
     sops --encrypt \
-        --pgp=D4F4B8950B85B1ACC1B57C32DCE318681336F060 \
+        --pgp=${GPG_KEY} \
         --encrypted-regex '^(data|stringData)$' \
         --in-place ./tenants/base/new-team/auth.yaml
 
