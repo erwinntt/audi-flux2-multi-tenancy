@@ -75,3 +75,10 @@ Ein neues Team wird mit einem eigenes Repository hizugefügt (ggf. Teams IPO, A&
         --export >> ./tenants/base/new-team/sync.yaml
 
     cd ./tenants/base/new-team/ && kustomize create --autodetect
+
+## Alerts
+
+Zwei Alerts Rocket und Pager usw................. TODO
+
+![](docs/img/alert-pager-test.png)
+
