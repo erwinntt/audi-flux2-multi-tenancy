@@ -2,17 +2,11 @@
 
 ![](docs/img/flux2-multi-tenancy.png)
 
-## Introduction
-
-Diese Demo berücksichtigt in den Repositories zur Zeit nur Production und Staging. Diese müssen dann ggf. auf die tatsächlichen Erfordernissen der Zielumgebung angepasst werden.
-
-## Prerequirements
+Prerequirements:
 
 - Repository bei Github erstellen
 - Ein Personal Access Token (PAC) für das Repository erstellen
 - Das PAC in die Datei `repo-pac.txt` kopieren
-
-## Installation
 
 Zuerst manuell erstellen, dann Flux installieren:
 
@@ -101,8 +95,6 @@ Rocket Chat ist auch per Team konfiguriert in den `base/alerts-rocket.yaml`.
 
 Pager Duty ist per Team konfiguriert in den `base/alerts-pager.yaml`.
 
-
-Zwei Alerts Rocket und Pager usw................. TODO
 
 ![](docs/img/alert-pager-test.png)
 
