@@ -10,20 +10,15 @@ Prerequirements:
 
 Zuerst manuell erstellen, dann Flux installieren:
 
-    export GITHUB_TOKEN=`cat repo-pac.txt`
-    export GITHUB_USER=erwinntt
-    export GITHUB_REPO="https://github.com/erwinntt/audi-flux2-multi-tenancy"
-
-- Erstellen des GPG Private Keys
-- Den GPG Private Key in die Variable GPG_KEY exportieren
-
 ```
-gpg --full-generate-key
-gpg --list-secret-keys fluxcdbot@users.noreply.github.com
-gpg --export-secret-keys --armor ${GPG_KEY} | kubectl create secret generic sops-gpg --namespace=flux-system --from-file=sops.asc=/dev/stdin
+export GITHUB_TOKEN=`cat repo-pac.txt`
+export GITHUB_USER=
+export GITHUB_REPO="https://github.com/erwinntt/audi-flux2-multi-tenancy"
 ```
 
 Flux installieren:
+
+Installation guide: https://fluxcd.io/flux/installation/
 
 - Den Github User in die Variable GITHUB_USER exportieren
 - Den Github Repo in die Variable GITHUB_REPO exportieren
@@ -36,6 +31,15 @@ flux bootstrap github \
     --personal \
     --path=clusters/staging \
     --components-extra image-reflector-controller,image-automation-controller
+```
+
+- Erstellen des GPG Private Keys
+- Den GPG Private Key in die Variable GPG_KEY exportieren
+
+```
+gpg --full-generate-key
+gpg --list-secret-keys fluxcdbot@users.noreply.github.com
+gpg --export-secret-keys --armor ${GPG_KEY} | kubectl create secret generic sops-gpg --namespace=flux-system --from-file=sops.asc=/dev/stdin
 ```
 
 ```
