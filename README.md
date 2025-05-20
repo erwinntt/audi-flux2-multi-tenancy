@@ -18,9 +18,9 @@ Zuerst manuell erstellen, dann Flux installieren:
 - Den GPG Private Key in die Variable GPG_KEY exportieren
 
 ```
-    gpg --full-generate-key
-    gpg --list-secret-keys fluxcdbot@users.noreply.github.com
-    gpg --export-secret-keys --armor ${GPG_KEY} | kubectl create secret generic sops-gpg --namespace=flux-system --from-file=sops.asc=/dev/stdin
+gpg --full-generate-key
+gpg --list-secret-keys fluxcdbot@users.noreply.github.com
+gpg --export-secret-keys --armor ${GPG_KEY} | kubectl create secret generic sops-gpg --namespace=flux-system --from-file=sops.asc=/dev/stdin
 ```
 
 Flux installieren:
