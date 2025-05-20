@@ -5,7 +5,7 @@
 Prerequirements:
 
 - Repository bei Github erstellen
-- Ein Personal Access Token (PAC) für das Repository erstellen
+- Ein Personal Access Token (PAC) für das Repository erstellen, this token needs to have both read and write permissions.
 - Das PAC in die Datei `repo-pac.txt` kopieren
 
 Zuerst manuell erstellen, dann Flux installieren:
